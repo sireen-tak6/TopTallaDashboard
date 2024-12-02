@@ -24,19 +24,12 @@ Feature: Client Module Testing
         Then all clients with names containing the token appear
 
     Scenario: filter client's information
-        When the user clicks the "Displayed Columns" button.
-        And a list of available columns appears, each with a toggle switch.
-        And the user toggles the switches to select columns.
-        And the user toggles the switches to deselect columns.
-        And the user closes the column selection dialog.
-        Then the client information table is displayed with only the selected columns visible.
-
-    Scenario: sorting clients 
-        When the user clicks the "Filter and sorting" button.
-        And a filter form appears.
-        And the user enters filter criteria
-        And the user clicks the "Save" button.
-        Then the filtered results are displayed, showing only the clients that match the filter.
+        When the user clicks the "Displayed Columns" button
+        And a list of available columns appears, each with a toggle switch
+        And the user toggles the switches to select columns
+        And the user toggles the switches to deselect columns
+        And the user closes the column selection dialog
+        Then the client information table is displayed with only the selected columns visible
 
     Scenario: Add client functionality
         When the user clicks the "Add Client" button
@@ -46,10 +39,18 @@ Feature: Client Module Testing
         Then a success message appears
         And the client is added to the clients list
 
+    Scenario: sorting clients 
+        When the user clicks the "Filter and sorting" button
+        And a filter form appears
+        And the user enters filter criteria
+        And the user clicks the "Save" button
+        Then the filtered results are displayed, showing only the clients that match the filter
+
     Scenario: Edit client functionality
-        When the user selects a client
+        When the user selects the client
         And the client information appears
         And the user clicks the edit button for the client
+        And the "Edit Client" form appears with all fields
         And the user fills all required fields in the client editing form
         And the user clicks the "Save" button
         Then a success message appears

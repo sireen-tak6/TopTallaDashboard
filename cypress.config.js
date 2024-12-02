@@ -34,7 +34,7 @@ module.exports = defineConfig({
       runMode: 2,
       openMode: 2,
     },
-    baseUrl: "https://partner.stg.toptalla.com/en/",
+    baseUrl: "https://partners.stg.toptalla.com/",
   },
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
