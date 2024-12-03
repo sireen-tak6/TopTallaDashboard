@@ -1,4 +1,4 @@
-Feature: Service Module Testing (with groups)
+Feature: Service Module Testing
 
     Verify Service page
     Verify user can Search a service
@@ -14,6 +14,10 @@ Feature: Service Module Testing (with groups)
     Scenario: Verify Service page
         Then service elements appears
 
+    Scenario: export as excel
+        When the user clicks the "Export As Excel" button
+        Then Excel file downloaded
+
     Scenario: Search a service
         When the user writes a valid token in the service search bar
         Then all services with names containing the token appear
@@ -23,9 +27,9 @@ Feature: Service Module Testing (with groups)
     Scenario: Rearrange services
         When the user clicks the "Rearrange" button
         And the user rearranges services, packages or groups
-        And the user clicks the "Save" button
-        Then services appear in the new order
+        And the user clicks the "Save" button for saving rearrange
+        Then a success message appears
+        And services appear in the new order
 
-    Scenario: export as excel
-        When the user clicks the "Export As Excel" button
-        Then Excel file downloaded
+
+
