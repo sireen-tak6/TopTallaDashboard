@@ -25,7 +25,8 @@
   },
   "dependencies": {
     "@testing-library/cypress": "^8.0.3",
-    "cypress": "^10.11.0"
+    "cypress": "^10.11.0",
+    "cypress-real-events": "^1.13.0"
   },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
