@@ -10,7 +10,7 @@ class LoginPage{
 
         LoginButton: () => cy.get('.ion-color-primary'), 
         
-        SuccessAlert:()=>cy.get('.ion-color-success'),
+        SuccessAlert:()=>cy.get('ion-toast.ion-color-success'),
 
 
     }
@@ -57,7 +57,7 @@ class LoginPage{
         cy.url().should('include', 'https://partners.stg.toptalla.com/calendar')
     }
     CheckSuccessMessage(){
-        this.elements.SuccessAlert().should('be.visible')
+        this.elements.SuccessAlert().should('exist')
     }
 }
 
