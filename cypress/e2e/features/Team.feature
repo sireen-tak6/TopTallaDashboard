@@ -15,7 +15,8 @@ Feature: Team Module Testing
         And I am on the Team page
 
     Scenario: Search an active employee
-        When the user is on the active employees page
+        When the user navigates to the active employees page
+        And the user is on the active employees page
         And the team search bar appears
         And the user writes a valid token in the team search bar
         Then all active clients with names containing the token appear
@@ -30,7 +31,7 @@ Feature: Team Module Testing
     Scenario: Rearrange employees
         When the user clicks the "Employees Rearrange" button
         And the user rearranges employees
-        And the user clicks the "Save" button
+        And the user clicks the "Save" button for rearrange team
         Then employees appear in the new order
 
     Scenario: add an employee
