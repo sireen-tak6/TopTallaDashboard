@@ -23,7 +23,7 @@ Feature: Service Group Type Module Testing
         When the groups and services list appears
         And the user clicks the "Edit" button for a specific group
         And the "Edit Group" form appears
-        And the user enters a valid group name
+        And the user enters a new valid group name
         And the user clicks the "Save" button
         Then a success message appears
 
